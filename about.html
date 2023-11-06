@@ -18,5 +18,81 @@
         </ul>
       </nav>
     </div>
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="img/DJing edit.jpg" alt="Evan DJing" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis
+              nesciunt animi vero earum maiores dicta ab ducimus officia labore,
+              voluptates ipsa adipisci optio cumque magni consequuntur ea
+              voluptatum quos dolore. Consequuntur necessitatibus neque
+              consequatur ullam, recusandae eligendi quam omnis maiores nesciunt
+              esse, blanditiis quidem ipsam ratione tempora alias deleniti
+              optio?
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <!--Skills-->
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>Web Developer</span><br />Web App Development</li>
+                <li>
+                  <span>Other sick skills</span><br />This is the other stuff I
+                  know how to do.
+                </li>
+              </ul>
+            </div>
+            <!--Experience-->
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li><span>Here's a Job</span><br />This is what I did there</li>
+                <li>
+                  <span>Here's another Job</span><br />This is what happened
+                  there
+                </li>
+              </ul>
+            </div>
+            <!--Education-->
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>Fullstack Academy</span><br />Web Dev Bootcamp</li>
+                <li>
+                  <span>School of Tolerable Knocks</span><br />Something more
+                  relevant will go here.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
   </body>
 </html>
